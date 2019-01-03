@@ -1,1 +1,2 @@
-# Automate
+# Automate 
+#the boring stuff 
