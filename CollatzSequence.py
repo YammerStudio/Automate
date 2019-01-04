@@ -4,13 +4,22 @@ Rules:
 if number is even, divide it by two
 if number is odd, triiple it and add one
 
-'''
 
-num = int(input('Enter in a num: '))
-while num != 1:
+'''
+def collatz(num):
     if(num % 2 == 0):
-        num = num / 2
-        print(str(num))
+        print(int(num/2))
+        return int(num/2)
     else:
-        num = (num * 3) + 1
-        print(str(num))
+       print(int(num * 3 + 1))
+       return int(num*3 + 1)
+
+
+print('Please enter a number and the Collatz sequence will be printed!')
+try:
+    x = int(input())
+except ValueError:
+    print('Error: Invalid Value, only integer man')
+
+while  x != 1:
+    x = collatz(x)
