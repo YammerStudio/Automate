@@ -1,4 +1,5 @@
 
+import sys
 '''
 Rules:
 if number is even, divide it by two
@@ -20,6 +21,7 @@ try:
     x = int(input())
 except ValueError:
     print('Error: Invalid Value, only integer man')
+    sys.exit()
 
 while  x != 1:
     x = collatz(x)
